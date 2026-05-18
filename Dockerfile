@@ -12,19 +12,25 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Copy app
 COPY . .
 
+# Create .env from example for build-time artisan commands (no DB needed at build)
+RUN cp .env.example .env && \
+    sed -i 's/^APP_KEY=$/APP_KEY=base64:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=/' .env
+
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
 
 # Install Node dependencies and build CSS
 RUN npm install --legacy-peer-deps && npm run build
 
-# Generate app key
-RUN php artisan key:generate --force
+# Cache config/routes for production (no DB calls, safe at build time)
+RUN php artisan config:cache && php artisan route:cache
 
-# Run migrations
-RUN php artisan migrate --force --no-interaction
+# Copy startup script
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 ENV PORT 8000
 EXPOSE 8000
 
-CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT:-8000}"]
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0"]
