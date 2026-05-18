@@ -1,0 +1,42 @@
+name: Deploy to Railway
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Railway CLI
+        run: npm install -g @railway/cli
+
+      - name: Deploy to Railway
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: |
+          echo "🚀 Starting deployment to Railway..."
+          railway up --detach
+          echo "✅ Deployment command sent!"
+          echo "📊 Check Railway dashboard for real-time logs"
+        shell: bash
+
+      - name: Deployment Complete
+        run: |
+          echo "✅ GitHub Actions workflow completed!"
+          echo ""
+          echo "📋 Next steps:"
+          echo "1. Go to: https://railway.app"
+          echo "2. Check 'Deployments' tab for status"
+          echo "3. Watch 'Logs' tab for build & deploy progress"
+          echo ""
+          echo "⏳ Deployment usually takes 2-3 minutes"
