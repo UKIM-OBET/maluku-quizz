@@ -3,7 +3,7 @@ FROM php:8.2-cli
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
-    git unzip libzip-dev libpng-dev libjpeg-dev libfreetype6-dev libonig-dev libxml2-dev zip curl \
+    git unzip libzip-dev libpng-dev libjpeg-dev libfreetype6-dev libonig-dev libxml2-dev zip curl nodejs npm \
     && docker-php-ext-install pdo_mysql mbstring zip exif pcntl gd
 
 # Install composer
@@ -13,13 +13,18 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 COPY . .
 
 # Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist || true
+RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
 
-# Generate app key (will be a noop if APP_KEY already set in env)
-RUN php artisan key:generate --force || true
+# Install Node dependencies and build CSS
+RUN npm install --legacy-peer-deps && npm run build
 
-ENV PORT 8080
-EXPOSE 8080
+# Generate app key
+RUN php artisan key:generate --force
 
-# Use Laravel's built-in server for simplicity. For production, replace with php-fpm + nginx.
-CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT:-8080}"]
+# Run migrations
+RUN php artisan migrate --force --no-interaction
+
+ENV PORT 8000
+EXPOSE 8000
+
+CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT:-8000}"]
