@@ -1,0 +1,1275 @@
+/* ============================================
+   Maluku Cultural Design & Decorations
+   Inspired by traditional Maluku patterns:
+   - Batik motifs
+   - Woven patterns (Tenun)
+   - Raja Ampat geometric designs
+   - Traditional ornaments
+   ============================================ */
+
+:root {
+    --maluku-primary: #0B6B63;
+    --maluku-accent: #FF6B35;
+    --maluku-light: #EBF5F0;
+    --maluku-green: #2F9E96;
+    --maluku-dark: #124A43;
+}
+
+/* ============================================
+   BACKGROUND PATTERNS & TEXTURES
+   ============================================ */
+
+/* Enhanced body background dengan multiple Maluku patterns */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        /* Pattern 1: Geometric Batik (top-left) */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><defs><pattern id="batik1" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="30" fill="none" stroke="%23FF6B35" stroke-width="1" opacity="0.15"/><circle cx="50" cy="50" r="20" fill="none" stroke="%230B6B63" stroke-width="0.8" opacity="0.12"/><polygon points="50,20 70,50 50,80 30,50" fill="none" stroke="%23FF6B35" stroke-width="0.8" opacity="0.1"/></pattern></defs><rect width="300" height="300" fill="url(%23batik1)"/></svg>'),
+        /* Pattern 2: Woven lines (horizontal) */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="40"><defs><pattern id="weave" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse"><line x1="0" y1="10" x2="40" y2="10" stroke="%232F9E96" stroke-width="0.5" opacity="0.08"/><line x1="0" y1="20" x2="40" y2="20" stroke="%23FF6B35" stroke-width="0.5" opacity="0.06"/><line x1="0" y1="30" x2="40" y2="30" stroke="%232F9E96" stroke-width="0.5" opacity="0.08"/></pattern></defs><rect width="200" height="40" fill="url(%23weave)"/></svg>'),
+        /* Pattern 3: Star motifs (scattered) */
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250"><defs><pattern id="stars" x="0" y="0" width="125" height="125" patternUnits="userSpaceOnUse"><circle cx="62.5" cy="62.5" r="3" fill="%23FF6B35" opacity="0.1"/><circle cx="20" cy="30" r="2" fill="%230B6B63" opacity="0.08"/><circle cx="105" cy="95" r="2" fill="%232F9E96" opacity="0.08"/></pattern></defs><rect width="250" height="250" fill="url(%23stars)"/></svg>');
+    background-size: 300px 300px, 200px 40px, 250px 250px;
+    background-position: 0 0, 0 100px, 50px 50px;
+    background-attachment: fixed;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Decorative corner elements */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 107, 53, 0.04), transparent 40%),
+                radial-gradient(circle at 80% 20%, rgba(47, 158, 150, 0.03), transparent 35%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Border dan ornamen tradisional Maluku */
+.topbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: repeating-linear-gradient(
+        90deg,
+        #FF6B35 0px,
+        #FF6B35 8px,
+        #0B6B63 8px,
+        #0B6B63 16px
+    );
+}
+
+/* Ornamen sudut pada card */
+.feature-card::before,
+.content-card::before {
+    content: '✦';
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    color: #FF6B35;
+    opacity: 0.5;
+    font-size: 1.2rem;
+}
+
+.feature-card::after,
+.content-card::after {
+    content: '✦';
+    position: absolute;
+    bottom: 8px;
+    left: 12px;
+    color: #FF6B35;
+    opacity: 0.5;
+    font-size: 1.2rem;
+}
+
+/* Efek pada sidebar */
+.sidebar {
+    border-top: 4px solid #FF6B35;
+    box-shadow: 
+        0 18px 50px rgba(11, 107, 99, 0.12),
+        inset 0 1px 0 rgba(11, 107, 99, 0.2);
+}
+
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: repeating-linear-gradient(
+        90deg,
+        #FF6B35 0,
+        #FF6B35 6px,
+        #0B6B63 6px,
+        #0B6B63 12px
+    );
+    border-radius: 28px 28px 0 0;
+}
+
+/* Garis dekoratif horizontal (anyaman Maluku) */
+.page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 107, 53, 0.4) 0,
+        rgba(255, 107, 53, 0.4) 8px,
+        transparent 8px,
+        transparent 16px
+    );
+    width: 60px;
+}
+
+/* Motif pada tombol */
+.button.primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.5) 0,
+        rgba(255, 255, 255, 0.5) 4px,
+        transparent 4px,
+        transparent 8px
+    );
+}
+
+/* Ornamen pada hero section */
+.hero::before {
+    width: 280px;
+    height: 280px;
+    background: 
+        radial-gradient(circle, rgba(255, 107, 53, 0.3) 0%, transparent 70%),
+        repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 107, 53, 0.1) 10px, rgba(255, 107, 53, 0.1) 20px);
+    top: -60px;
+    left: -60px;
+}
+
+.hero::after {
+    width: 380px;
+    height: 380px;
+    background: 
+        radial-gradient(circle, rgba(47, 158, 150, 0.2) 0%, transparent 70%),
+        repeating-linear-gradient(-45deg, transparent, transparent 10px, rgba(47, 158, 150, 0.08) 10px, rgba(47, 158, 150, 0.08) 20px);
+    bottom: -120px;
+    right: -80px;
+}
+
+/* Footer dengan motif tradisional */
+.footer::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: repeating-linear-gradient(
+        90deg,
+        #0B6B63 0px,
+        #0B6B63 8px,
+        #FF6B35 8px,
+        #FF6B35 16px
+    );
+}
+
+.footer {
+    position: relative;
+    background: #0B6B63;
+    color: #fff;
+}
+
+.footer p {
+    color: #EBF5F0;
+}
+
+/* ============================================
+   CARD & CONTENT DECORATIONS
+   ============================================ */
+
+/* Enhanced card styling dengan ornamen */
+.card-with-ornament {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-with-ornament::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    height: 3px;
+    background: linear-gradient(90deg, #FF6B35, #0B6B63, #2F9E96, #FF6B35);
+    background-size: 200% 100%;
+}
+
+.card-with-ornament::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: repeating-linear-gradient(
+        90deg,
+        #FF6B35 0,
+        #FF6B35 4px,
+        transparent 4px,
+        transparent 8px
+    );
+    opacity: 0.5;
+}
+
+/* Motif di sudut card */
+.corner-ornament {
+    position: relative;
+}
+
+.corner-ornament::before {
+    content: '✦';
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 1.5rem;
+    color: #FF6B35;
+    opacity: 0.3;
+}
+
+.corner-ornament::after {
+    content: '✦';
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+    font-size: 1.5rem;
+    color: #FF6B35;
+    opacity: 0.3;
+}
+
+/* ============================================
+   TABLE & GRID DECORATIONS
+   ============================================ */
+
+/* Ornamen pada table header */
+table thead tr {
+    position: relative;
+}
+
+table thead tr::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.3) 0,
+        rgba(255, 255, 255, 0.3) 6px,
+        transparent 6px,
+        transparent 12px
+    );
+}
+
+/* Row hover dengan efek Maluku */
+table tbody tr:hover {
+    background: linear-gradient(90deg, rgba(255, 107, 53, 0.08), rgba(47, 158, 150, 0.08));
+}
+
+/* ============================================
+   SECTION DIVIDERS & DECORATIVE LINES
+   ============================================ */
+
+/* Garis pemisah dengan motif */
+.divider-ornament {
+    position: relative;
+    height: 2px;
+    margin: 2rem 0;
+    background: repeating-linear-gradient(
+        90deg,
+        #FF6B35 0,
+        #FF6B35 6px,
+        transparent 6px,
+        transparent 12px,
+        #0B6B63 12px,
+        #0B6B63 18px,
+        transparent 18px,
+        transparent 24px
+    );
+    opacity: 0.4;
+}
+
+.divider-ornament::before {
+    content: '◆';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 0 8px;
+    color: #FF6B35;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   BUTTON ENHANCEMENTS
+   ============================================ */
+
+/* Primary button dengan texture Maluku */
+.btn-maluku-primary {
+    position: relative;
+    background: #FF6B35;
+    color: white;
+    overflow: hidden;
+}
+
+.btn-maluku-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.4) 0,
+        rgba(255, 255, 255, 0.4) 3px,
+        transparent 3px,
+        transparent 6px
+    );
+}
+
+.btn-maluku-primary::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.2) 0,
+        rgba(0, 0, 0, 0.2) 3px,
+        transparent 3px,
+        transparent 6px
+    );
+}
+
+.btn-maluku-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* Secondary button dengan border ornament */
+.btn-maluku-secondary {
+    position: relative;
+    border: 2px solid #0B6B63;
+    color: #0B6B63;
+    background: white;
+    overflow: hidden;
+}
+
+.btn-maluku-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0B6B63;
+    transition: width 0.3s ease;
+}
+
+.btn-maluku-secondary:hover::before {
+    width: 100%;
+}
+
+/* ============================================
+   HERO & BANNER SECTIONS
+   ============================================ */
+
+/* Hero section dengan background motif */
+.hero-maluku {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0B6B63 0%, #2F9E96 50%, #0B6B63 100%);
+}
+
+.hero-maluku::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><defs><pattern id="hero-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="25" fill="none" stroke="%23FFFFFF" stroke-width="1" opacity="0.1"/><circle cx="50" cy="50" r="15" fill="none" stroke="%23FF6B35" stroke-width="0.8" opacity="0.08"/><line x1="30" y1="50" x2="70" y2="50" stroke="%23FFFFFF" stroke-width="0.5" opacity="0.06"/><line x1="50" y1="30" x2="50" y2="70" stroke="%23FFFFFF" stroke-width="0.5" opacity="0.06"/></pattern></defs><rect width="400" height="400" fill="url(%23hero-pattern)"/></svg>');
+    background-size: 100px 100px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.hero-maluku::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent 20px,
+        rgba(255, 255, 255, 0.05) 20px,
+        rgba(255, 255, 255, 0.05) 40px
+    );
+}
+
+/* ============================================
+   SIDEBAR DECORATIONS
+   ============================================ */
+
+/* Sidebar dengan border & pattern */
+aside {
+    position: relative;
+}
+
+aside::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #FF6B35 0%, #0B6B63 50%, #2F9E96 100%);
+    border-radius: 28px 28px 0 0;
+}
+
+/* Menu item dengan hover effect */
+aside a:hover {
+    background: linear-gradient(90deg, rgba(255, 107, 53, 0.1), rgba(47, 158, 150, 0.1));
+    border-left: 3px solid #FF6B35;
+    padding-left: calc(1rem - 3px);
+}
+
+/* ============================================
+   PROGRESS & STAT BARS
+   ============================================ */
+
+/* Progress bar dengan warna Maluku */
+.progress-bar {
+    position: relative;
+    background: #E0E0E0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #FF6B35, #0B6B63);
+    border-radius: 10px;
+    animation: slideProgress 2s ease-in-out infinite;
+}
+
+@keyframes slideProgress {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+/* Stat box dengan ornament */
+.stat-box {
+    position: relative;
+    border-left: 4px solid #FF6B35;
+    padding-left: 16px;
+}
+
+.stat-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: repeating-linear-gradient(
+        180deg,
+        #FF6B35 0,
+        #FF6B35 8px,
+        transparent 8px,
+        transparent 16px
+    );
+    opacity: 0.4;
+}
+
+/* ============================================
+   MODAL & POPUP DECORATIONS
+   ============================================ */
+
+/* Modal dengan border motif */
+.modal {
+    position: relative;
+}
+
+.modal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #FF6B35;
+    border-radius: 8px;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent 0,
+        transparent 10px,
+        rgba(255, 107, 53, 0.03) 10px,
+        rgba(255, 107, 53, 0.03) 20px
+    );
+}
+
+/* ============================================
+   ANIMATION & EFFECTS - Student Engagement
+   ============================================ */
+
+/* Floating decoration elements */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes float-reverse {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(20px); }
+}
+
+@keyframes pulse-maluku {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+/* ============================================
+   STUDENT ENGAGEMENT ANIMATIONS
+   ============================================ */
+
+/* Bounce animation untuk buttons */
+@keyframes bounce-engage {
+    0%, 100% { transform: translateY(0) scale(1); }
+    25% { transform: translateY(-8px) scale(1.02); }
+    50% { transform: translateY(0) scale(1); }
+    75% { transform: translateY(-4px) scale(1.01); }
+}
+
+/* Glow effect untuk interactive elements */
+@keyframes glow-pulse {
+    0%, 100% { 
+        box-shadow: 0 0 5px rgba(255, 107, 53, 0.3);
+    }
+    50% { 
+        box-shadow: 0 0 20px rgba(255, 107, 53, 0.6), 0 0 30px rgba(11, 107, 99, 0.3);
+    }
+}
+
+/* Shimmer effect untuk highlight */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Rainbow wave effect */
+@keyframes rainbow-wave {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
+
+/* Pulse scale untuk achievement badges */
+@keyframes pulse-scale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Wiggle animation untuk attention grabbing */
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-2deg); }
+    75% { transform: rotate(2deg); }
+}
+
+/* Bounce in dari atas */
+@keyframes bounce-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Bounce in dari kiri */
+@keyframes bounce-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Bounce in dari kanan */
+@keyframes bounce-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Flip animation untuk cards */
+@keyframes flip {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1.05); }
+    75% { transform: scale(1.1); }
+}
+
+/* Confetti burst animation */
+@keyframes confetti-burst {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--tx), var(--ty)) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Spin animation */
+@keyframes spin-fast {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Grow animation */
+@keyframes grow {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Typewriter effect */
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.decoration-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+.decoration-float-reverse {
+    animation: float-reverse 5s ease-in-out infinite;
+}
+
+/* Blink animation untuk ornamen */
+.ornament-blink {
+    animation: pulse-maluku 2s ease-in-out infinite;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+@media (max-width: 768px) {
+    body::before {
+        background-size: 200px 200px, 150px 30px, 150px 150px;
+    }
+
+    aside {
+        width: 100% !important;
+    }
+
+    .hero-maluku::after {
+        height: 40px;
+    }
+}
+
+/* ============================================
+   INTERACTIVE ELEMENTS - STUDENT ENGAGEMENT
+   ============================================ */
+
+/* Primary Button dengan engaging animations */
+.btn-engage-primary {
+    position: relative;
+    background: linear-gradient(135deg, #FF6B35 0%, #E84C1F 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-engage-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s ease;
+}
+
+.btn-engage-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 107, 53, 0.4);
+    animation: glow-pulse 1.5s infinite;
+}
+
+.btn-engage-primary:hover::before {
+    left: 100%;
+}
+
+.btn-engage-primary:active {
+    animation: bounce-engage 0.6s ease;
+    transform: scale(0.98);
+}
+
+/* Card dengan hover elevation dan reveal effect */
+.card-engage {
+    position: relative;
+    overflow: hidden;
+    background: white;
+    border-radius: 24px;
+    padding: 24px;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: pointer;
+}
+
+.card-engage::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card-engage:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(11, 107, 99, 0.15);
+}
+
+.card-engage:hover::before {
+    opacity: 1;
+}
+
+/* Quiz option buttons dengan interactive glow */
+.quiz-option {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: white;
+    border: 2px solid #0B6B63;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #0B6B63;
+}
+
+.quiz-option::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #FF6B35, #0B6B63);
+    z-index: -1;
+    border-radius: 16px;
+    transition: width 0.3s ease;
+}
+
+.quiz-option:hover {
+    transform: translateX(4px);
+    border-color: #FF6B35;
+    box-shadow: 0 6px 16px rgba(255, 107, 53, 0.2);
+}
+
+.quiz-option:hover::after {
+    width: 100%;
+}
+
+.quiz-option.selected {
+    background: linear-gradient(135deg, #0B6B63 0%, #2F9E96 100%);
+    color: white;
+    border-color: #FF6B35;
+    animation: pulse-scale 0.5s ease;
+}
+
+/* Progress bar dengan animated filling */
+.progress-container {
+    position: relative;
+    width: 100%;
+    height: 12px;
+    background: #E0E0E0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 12px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #FF6B35 0%, #0B6B63 100%);
+    border-radius: 10px;
+    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    animation: shimmer 2s infinite;
+    background-size: 200% 100%;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    background: radial-gradient(circle at right center, rgba(255, 255, 255, 0.5), transparent);
+}
+
+/* Leaderboard row dengan hover highlight */
+.leaderboard-row {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid rgba(11, 107, 99, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.leaderboard-row::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, rgba(255, 107, 53, 0.1), transparent);
+    transition: width 0.3s ease;
+}
+
+.leaderboard-row:hover {
+    background: rgba(255, 107, 53, 0.05);
+    transform: translateX(4px);
+}
+
+.leaderboard-row:hover::before {
+    width: 100%;
+}
+
+/* Badge animation untuk achievements */
+.achievement-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #FF6B35 0%, #E84C1F 100%);
+    border-radius: 50%;
+    color: white;
+    font-size: 32px;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    animation: pulse-scale 1.5s ease-in-out infinite;
+    position: relative;
+    cursor: pointer;
+}
+
+.achievement-badge:hover {
+    animation: heartbeat 0.8s ease;
+}
+
+/* Points counter dengan number increment animation */
+.points-counter {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #FF6B35;
+    position: relative;
+}
+
+.points-counter.increment {
+    animation: grow 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Navigation link dengan underline animation */
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #0B6B63;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(90deg, #FF6B35, #0B6B63);
+    transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Success notification dengan bounce in */
+.notification-success {
+    animation: bounce-in-down 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background: linear-gradient(135deg, #2F9E96 0%, #0B6B63 100%);
+    color: white;
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 20px rgba(47, 158, 150, 0.3);
+}
+
+/* Error notification */
+.notification-error {
+    animation: bounce-in-down 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background: linear-gradient(135deg, #FF6B35 0%, #E84C1F 100%);
+    color: white;
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* Spinner loading animation */
+.spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(11, 107, 99, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #0B6B63;
+    animation: spin-fast 1s linear infinite;
+}
+
+/* Text reveal animation */
+.text-reveal {
+    animation: typewriter 1.5s steps(40, end);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #FF6B35;
+    width: 100%;
+}
+
+/* Staggered list items animation */
+.list-item {
+    animation: bounce-in-left 0.5s ease;
+}
+
+.list-item:nth-child(1) { animation-delay: 0s; }
+.list-item:nth-child(2) { animation-delay: 0.1s; }
+.list-item:nth-child(3) { animation-delay: 0.2s; }
+.list-item:nth-child(4) { animation-delay: 0.3s; }
+.list-item:nth-child(5) { animation-delay: 0.4s; }
+.list-item:nth-child(n+6) { animation-delay: 0.5s; }
+
+/* Hover scale untuk action buttons */
+.btn-action {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-action:hover {
+    transform: scale(1.05);
+}
+
+.btn-action:active {
+    transform: scale(0.98);
+}
+
+/* Ripple effect on click */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 107, 53, 0.5);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.ripple.active::after {
+    animation: ripple-animation 0.6s ease-out;
+}
+
+/* Confetti particle effect */
+.confetti {
+    position: fixed;
+    pointer-events: none;
+}
+
+.confetti-piece {
+    animation: confetti-burst 2s ease-out forwards;
+}
+
+/* Tooltip dengan fade in */
+.tooltip {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    background: #0B6B63;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top-color: #0B6B63;
+}
+
+.tooltip.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Bounce animation for decorative elements */
+.decoration-bounce {
+    animation: bounce-engage 2s ease-in-out infinite;
+}
+
+/* Gradient animated background */
+.gradient-animate {
+    background: linear-gradient(-45deg, #FF6B35, #0B6B63, #2F9E96, #FF6B35);
+    background-size: 400% 400%;
+    animation: rainbow-wave 8s ease infinite;
+}
+
+/* ============================================
+   INTERACTIVE BUTTON STYLES
+   ============================================ */
+
+/* Success button */
+.btn-success {
+    background: linear-gradient(135deg, #2F9E96 0%, #0B6B63 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-success:hover {
+    box-shadow: 0 10px 25px rgba(47, 158, 150, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Danger button */
+.btn-danger {
+    background: linear-gradient(135deg, #FF6B35 0%, #E84C1F 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-danger:hover {
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   PAGE TRANSITION ANIMATIONS
+   ============================================ */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ripple-animation {
+    to {
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
+}
+
+/* Efek pada tabel */
+table tbody tr:hover {
+    background: 
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transp55, 107, 53, 0.06) 20px,
+            rgba(255, 107, 53, 0.06) 40px
+        ),
+        rgba(255, 107, 53, 0.1
+        rgba(248, 169, 76, 0.08);
+}
+
+/* Variasi warna accent sesuai budaya Maluku */
+:root {0B6B63;
+    --maluku-coral: #FF6B35;
+    --maluku-cream: #EBF5F0;
+    --maluku-green: #2F9E96;
+    --maluku-green: #2d7d75;
+}
+
+/* Efek shimmer pada card saat hover */
+.feature-card:hover,
+.content-card:hover {55, 107, 53, 0.3);\n    border: 1px solid rgba(248, 169, 76, 0.2);
+}
+
+/* Ornamen pada form */
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+    color: rgba(26, 90, 82, 0.4);
+}11, 107, 99, 0.5
+
+/* Dekorasi garis pada section */
+.page-header {
+    position: relative;
+    padding-bottom: 16px;
+}
+
+.page-header h2 {
+    color: #1a5a52;
+    letter-s0B6B63;
+    letter-spacing: 0.02em;
+    font-weight: 800
+
+/* Animasi pulse untuk highlight */
+@keyframes maluku-pulse {
+    0%, 100% {
+        box-shadow: 0 18px 50px rgba(11, 107, 99, 0.12);
+    }
+    50% {
+        box-shadow: 0 18px 50px rgba(255, 107, 53, 0.15);
+    }
+}
+
+.feature-card:hover {
+    animation: maluku-pulse 2s ease-in-out;
+}
+
+/* Motif pada list */
+.sidebar nav a::before {
+    content: '→';
+    position: absolute;
+    left: 8px;
+    opacity: 0;
+    transition: opacity 0.24s ease;
+}
+
+.sidebar nav a:hover::before {
+    opacity: 0.6;
+}

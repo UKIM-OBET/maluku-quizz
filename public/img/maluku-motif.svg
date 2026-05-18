@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="malukuMotif" x="0" y="0" width="200" height="120" patternUnits="userSpaceOnUse">
+      <!-- Center sun circle -->
+      <circle cx="100" cy="60" r="18" fill="rgba(255, 228, 169, 0.4)"/>
+      <circle cx="100" cy="60" r="14" fill="none" stroke="rgba(255, 228, 169, 0.5)" stroke-width="1.5"/>
+      
+      <!-- Top spoke -->
+      <line x1="100" y1="38" x2="100" y2="20" stroke="rgba(255, 228, 169, 0.4)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="100" cy="15" r="5" fill="rgba(255, 228, 169, 0.4)"/>
+      
+      <!-- Bottom spoke -->
+      <line x1="100" y1="82" x2="100" y2="100" stroke="rgba(255, 228, 169, 0.4)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="100" cy="105" r="5" fill="rgba(255, 228, 169, 0.4)"/>
+      
+      <!-- Left spoke -->
+      <line x1="75" y1="60" x2="50" y2="60" stroke="rgba(255, 228, 169, 0.4)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="45" cy="60" r="5" fill="rgba(255, 228, 169, 0.4)"/>
+      
+      <!-- Right spoke -->
+      <line x1="125" y1="60" x2="150" y2="60" stroke="rgba(255, 228, 169, 0.4)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="155" cy="60" r="5" fill="rgba(255, 228, 169, 0.4)"/>
+      
+      <!-- Top-right diagonal spoke -->
+      <line x1="112" y1="48" x2="130" y2="30" stroke="rgba(255, 228, 169, 0.4)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="135" cy="25" r="5" fill="rgba(255, 228, 169, 0.4)"/>
+      
+      <!-- Top-left diagonal spoke -->
+      <line x1="88" y1="48" x2="70" y2="30" stroke="rgba(255, 228, 169, 0.4)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="65" cy="25" r="5" fill="rgba(255, 228, 169, 0.4)"/>
+      
+      <!-- Bottom-right diagonal spoke -->
+      <line x1="112" y1="72" x2="130" y2="90" stroke="rgba(255, 228, 169, 0.4)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="135" cy="95" r="5" fill="rgba(255, 228, 169, 0.4)"/>
+      
+      <!-- Bottom-left diagonal spoke -->
+      <line x1="88" y1="72" x2="70" y2="90" stroke="rgba(255, 228, 169, 0.4)" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="65" cy="95" r="5" fill="rgba(255, 228, 169, 0.4)"/>
+      
+      <!-- Left-center decorative element -->
+      <circle cx="30" cy="60" r="8" fill="none" stroke="rgba(255, 228, 169, 0.3)" stroke-width="1.5"/>
+      
+      <!-- Right-center decorative element -->
+      <circle cx="170" cy="60" r="8" fill="none" stroke="rgba(255, 228, 169, 0.3)" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  
+  <rect width="400" height="120" fill="url(#malukuMotif)"/>
+</svg>

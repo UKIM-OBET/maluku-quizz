@@ -1,0 +1,65 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <!-- Pattern Maluku dengan motif tradisional -->
+    <pattern id="maluku-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <!-- Background base -->
+      <rect width="200" height="200" fill="#f6f2e8" opacity="0.3"/>
+      
+      <!-- Motif segitiga geometric (batik Maluku) -->
+      <g opacity="0.08" stroke="#1a5a52" stroke-width="1" fill="none">
+        <!-- Segitiga pola 1 -->
+        <polygon points="50,20 100,80 0,80"/>
+        <polygon points="150,20 200,80 100,80"/>
+        <polygon points="50,120 100,180 0,180"/>
+        <polygon points="150,120 200,180 100,180"/>
+      </g>
+      
+      <!-- Motif lingkaran (dari batik tradisional) -->
+      <g opacity="0.07" fill="none" stroke="#1a5a52" stroke-width="0.8">
+        <!-- Lingkaran di setiap sudut -->
+        <circle cx="30" cy="30" r="15"/>
+        <circle cx="30" cy="30" r="10"/>
+        <circle cx="30" cy="30" r="5"/>
+        
+        <circle cx="170" cy="30" r="15"/>
+        <circle cx="170" cy="30" r="10"/>
+        <circle cx="170" cy="30" r="5"/>
+        
+        <circle cx="30" cy="170" r="15"/>
+        <circle cx="30" cy="170" r="10"/>
+        <circle cx="30" cy="170" r="5"/>
+        
+        <circle cx="170" cy="170" r="15"/>
+        <circle cx="170" cy="170" r="10"/>
+        <circle cx="170" cy="170" r="5"/>
+        
+        <!-- Lingkaran pusat -->
+        <circle cx="100" cy="100" r="20"/>
+        <circle cx="100" cy="100" r="13"/>
+        <circle cx="100" cy="100" r="6"/>
+      </g>
+      
+      <!-- Motif bintang/mahkota (Raja Ampat) -->
+      <g opacity="0.06" fill="#1a5a52">
+        <!-- Bintang 5 titik -->
+        <polygon points="100,40 110,65 136,65 115,80 125,105 100,90 75,105 85,80 64,65 90,65"/>
+      </g>
+      
+      <!-- Motif garis horizontal (anyaman) -->
+      <g opacity="0.05" stroke="#1a5a52" stroke-width="0.5">
+        <line x1="0" y1="50" x2="200" y2="50"/>
+        <line x1="0" y1="100" x2="200" y2="100"/>
+        <line x1="0" y1="150" x2="200" y2="150"/>
+      </g>
+      
+      <!-- Motif garis vertikal (anyaman) -->
+      <g opacity="0.05" stroke="#1a5a52" stroke-width="0.5">
+        <line x1="50" y1="0" x2="50" y2="200"/>
+        <line x1="100" y1="0" x2="100" y2="200"/>
+        <line x1="150" y1="0" x2="150" y2="200"/>
+      </g>
+    </pattern>
+  </defs>
+  
+  <rect width="200" height="200" fill="url(#maluku-pattern)"/>
+</svg>

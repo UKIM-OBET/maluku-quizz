@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* Smooth reveal animation */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  animation: reveal 0.8s ease forwards;
+}
+
+@keyframes page-layer-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-layer {
+  animation: page-layer-fade 0.9s ease;
+}

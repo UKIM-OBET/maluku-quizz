@@ -1,0 +1,429 @@
+<!-- Student Engagement Animations - Implementation Examples -->
+
+<!-- ============================================
+     BUTTON EXAMPLES
+     ============================================ -->
+
+<!-- Primary Engagement Button -->
+<button class="btn-engage-primary px-6 py-3 bg-[#FF6B35] text-white rounded-full font-bold">
+    🚀 Mulai Kuis
+</button>
+
+<!-- Success Button -->
+<button class="btn-success px-6 py-3 text-white rounded-full font-bold">
+    ✓ Simpan
+</button>
+
+<!-- Danger Button -->
+<button class="btn-danger px-6 py-3 text-white rounded-full font-bold">
+    × Hapus
+</button>
+
+<!-- Action Button (scale on hover) -->
+<button class="btn-action px-4 py-2 bg-white border-2 border-[#0B6B63] rounded-full">
+    Edit
+</button>
+
+<!-- ============================================
+     CARD EXAMPLES
+     ============================================ -->
+
+<!-- Engaging Card (elevator effect on hover) -->
+<div class="card-engage bg-white rounded-3xl p-6 shadow-md">
+    <h3 class="text-xl font-bold text-[#0B6B63] mb-2">Kuis Menarik</h3>
+    <p class="text-gray-600">Klik untuk memulai mengerjakan kuis</p>
+</div>
+
+<!-- Card with Corner Ornaments -->
+<div class="corner-ornament card-engage bg-white rounded-3xl p-6 shadow-md">
+    <h3 class="text-xl font-bold text-[#0B6B63] mb-2">Budaya Maluku</h3>
+    <p class="text-gray-600">Pelajari kekayaan budaya Maluku</p>
+</div>
+
+<!-- ============================================
+     QUIZ OPTION EXAMPLES
+     ============================================ -->
+
+<!-- Single Quiz Option -->
+<label class="quiz-option">
+    <input type="radio" name="answer" value="option1">
+    Ini adalah pilihan jawaban pertama
+</label>
+
+<!-- Multiple Quiz Options -->
+<div class="mb-4">
+    <label class="quiz-option">
+        <input type="radio" name="answers[1]" value="A">
+        Jawaban A - Pilihan pertama
+    </label>
+    
+    <label class="quiz-option">
+        <input type="radio" name="answers[1]" value="B">
+        Jawaban B - Pilihan kedua
+    </label>
+    
+    <label class="quiz-option">
+        <input type="radio" name="answers[1]" value="C">
+        Jawaban C - Pilihan ketiga
+    </label>
+    
+    <label class="quiz-option">
+        <input type="radio" name="answers[1]" value="D">
+        Jawaban D - Pilihan keempat
+    </label>
+</div>
+
+<!-- ============================================
+     PROGRESS BAR EXAMPLES
+     ============================================ -->
+
+<!-- Progress Container with Fill -->
+<div class="progress-container">
+    <div class="progress-fill" style="width: 45%;"></div>
+</div>
+
+<!-- Labeled Progress -->
+<div class="mb-3">
+    <div class="flex justify-between items-center mb-2">
+        <span class="font-bold text-[#0B6B63]">📊 Progres Kuis</span>
+        <span class="text-[#FF6B35]">5 dari 10</span>
+    </div>
+    <div class="progress-container">
+        <div class="progress-fill" style="width: 50%;"></div>
+    </div>
+</div>
+
+<!-- ============================================
+     ACHIEVEMENT BADGE EXAMPLES
+     ============================================ -->
+
+<!-- Achievement Badge (pulses and celebrates) -->
+<div class="achievement-badge cursor-pointer" onclick="celebrateAchievement(this)">
+    🏆
+</div>
+
+<!-- Multiple Badges -->
+<div class="flex gap-4">
+    <div class="achievement-badge">🥇</div>
+    <div class="achievement-badge">🎖️</div>
+    <div class="achievement-badge">⭐</div>
+</div>
+
+<!-- ============================================
+     NOTIFICATION EXAMPLES
+     ============================================ -->
+
+<!-- Success Notification -->
+<div class="notification-success">
+    ✓ Jawaban Anda benar! Dapatkan +10 poin
+</div>
+
+<!-- Error Notification -->
+<div class="notification-error">
+    ✗ Jawaban Anda salah. Coba lagi!
+</div>
+
+<!-- Using JavaScript -->
+<script>
+    // Show success
+    showNotification('✓ Kuis selesai! Nilai: 85/100', 'success')
+    
+    // Show error
+    showNotification('✗ Terjadi kesalahan. Silakan coba lagi', 'error')
+</script>
+
+<!-- ============================================
+     LEADERBOARD ROW EXAMPLES
+     ============================================ -->
+
+<!-- Leaderboard Rows (staggered animation) -->
+<div class="leaderboard-row">
+    <span class="font-bold text-lg text-[#FF6B35] mr-4">1</span>
+    <span class="flex-1">Ahmad Pratama</span>
+    <span class="font-bold text-[#0B6B63]">950 poin</span>
+</div>
+
+<div class="leaderboard-row">
+    <span class="font-bold text-lg text-[#FF6B35] mr-4">2</span>
+    <span class="flex-1">Siti Rahmah</span>
+    <span class="font-bold text-[#0B6B63]">920 poin</span>
+</div>
+
+<div class="leaderboard-row">
+    <span class="font-bold text-lg text-[#FF6B35] mr-4">3</span>
+    <span class="flex-1">Budi Santoso</span>
+    <span class="font-bold text-[#0B6B63]">890 poin</span>
+</div>
+
+<!-- ============================================
+     STAT BOX EXAMPLES
+     ============================================ -->
+
+<!-- Stat Box (left border accent) -->
+<div class="stat-box bg-white rounded-2xl p-6 border-l-4 border-[#FF6B35]">
+    <div class="text-4xl font-bold text-[#FF6B35]">85</div>
+    <p class="m-0 text-gray-600 font-medium">Nilai Rata-rata</p>
+</div>
+
+<!-- Stat Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div class="stat-box bg-white rounded-2xl p-6 border-l-4 border-[#FF6B35]">
+        <div class="text-3xl font-bold text-[#FF6B35]">15</div>
+        <p class="m-0 text-gray-600">Kuis Selesai</p>
+    </div>
+    
+    <div class="stat-box bg-white rounded-2xl p-6 border-l-4 border-[#0B6B63]">
+        <div class="text-3xl font-bold text-[#0B6B63]">12</div>
+        <p class="m-0 text-gray-600">Kuis Lulus</p>
+    </div>
+    
+    <div class="stat-box bg-white rounded-2xl p-6 border-l-4 border-[#2F9E96]">
+        <div class="text-3xl font-bold text-[#2F9E96]">8.5</div>
+        <p class="m-0 text-gray-600">Rating</p>
+    </div>
+</div>
+
+<!-- ============================================
+     LIST ITEMS WITH STAGGER ANIMATION
+     ============================================ -->
+
+<!-- Staggered List (each item animates in sequence) -->
+<ul class="list-none p-0">
+    <li class="list-item bg-white rounded-lg p-4 mb-3 border-l-4 border-[#FF6B35]">
+        <strong>Motif Batik Maluku</strong> - Pelajari tentang batik tradisional
+    </li>
+    
+    <li class="list-item bg-white rounded-lg p-4 mb-3 border-l-4 border-[#0B6B63]">
+        <strong>Tari Cakalele</strong> - Tarian perang tradisional
+    </li>
+    
+    <li class="list-item bg-white rounded-lg p-4 mb-3 border-l-4 border-[#2F9E96]">
+        <strong>Kerajinan Tenun</strong> - Kain tradisional Maluku
+    </li>
+    
+    <li class="list-item bg-white rounded-lg p-4 mb-3 border-l-4 border-[#FF6B35]">
+        <strong>Kuliner Maluku</strong> - Makanan tradisional khas
+    </li>
+</ul>
+
+<!-- ============================================
+     TOOLTIP EXAMPLES
+     ============================================ -->
+
+<!-- Element with Tooltip -->
+<button data-tooltip="Klik untuk memulai kuis" class="px-6 py-3 bg-[#FF6B35] text-white rounded-full">
+    Mulai
+</button>
+
+<!-- Multiple Tooltips -->
+<div class="flex gap-4">
+    <button data-tooltip="Edit konten ini" class="px-4 py-2 bg-blue-500 text-white rounded">
+        ✏️
+    </button>
+    
+    <button data-tooltip="Hapus konten ini" class="px-4 py-2 bg-red-500 text-white rounded">
+        🗑️
+    </button>
+</div>
+
+<!-- ============================================
+     LOADING SPINNER EXAMPLES
+     ============================================ -->
+
+<!-- Simple Spinner -->
+<div class="spinner"></div>
+
+<!-- Spinner with Text -->
+<div class="flex items-center gap-3">
+    <div class="spinner"></div>
+    <span class="text-[#0B6B63] font-semibold">Memproses...</span>
+</div>
+
+<!-- Form Submission with Spinner -->
+<form id="quizForm">
+    <!-- Form fields -->
+    <button type="submit" class="btn-engage-primary px-6 py-3">
+        Kirim Jawaban
+    </button>
+</form>
+
+<script>
+    document.getElementById('quizForm').addEventListener('submit', function() {
+        this.querySelector('button').innerHTML = '<div class="spinner"></div> Memproses...';
+    })
+</script>
+
+<!-- ============================================
+     DIVIDER ORNAMENT EXAMPLES
+     ============================================ -->
+
+<!-- Decorative Divider -->
+<div class="divider-ornament"></div>
+
+<!-- Multiple Dividers -->
+<div class="my-8">
+    <div class="divider-ornament"></div>
+</div>
+
+<!-- ============================================
+     DECORATIVE FLOATING ELEMENTS
+     ============================================ -->
+
+<!-- Bouncing Ornament -->
+<div class="decoration-bounce text-4xl">
+    ✦
+</div>
+
+<!-- Multiple Floating Ornaments -->
+<div class="flex justify-around my-6">
+    <div class="decoration-bounce text-5xl">✦</div>
+    <div class="decoration-float text-5xl">◆</div>
+    <div class="decoration-float-reverse text-5xl">✦</div>
+</div>
+
+<!-- ============================================
+     POINTS COUNTER EXAMPLES
+     ============================================ -->
+
+<!-- Animated Points Counter -->
+<div class="text-2xl font-bold">
+    Poin Anda: <span class="points-counter text-[#FF6B35]">0</span>
+</div>
+
+<!-- JavaScript to animate -->
+<script>
+    // Increment points
+    const pointsEl = document.querySelector('.points-counter');
+    animateCounter(pointsEl, 150, 1000)  // Animate to 150 in 1 second
+</script>
+
+<!-- ============================================
+     COMBINED EXAMPLE: QUIZ CARD
+     ============================================ -->
+
+<!-- Complete Quiz Card with Animations -->
+<div class="card-engage bg-white rounded-3xl p-6 shadow-md mb-6">
+    <div class="flex justify-between items-start mb-4">
+        <div>
+            <h3 class="text-xl font-bold text-[#0B6B63] m-0">📚 Kuis Batik Maluku</h3>
+            <p class="m-0 text-sm text-gray-600">10 pertanyaan • Durasi: 15 menit</p>
+        </div>
+        <div class="achievement-badge text-2xl">⭐</div>
+    </div>
+    
+    <div class="mb-4">
+        <div class="flex justify-between items-center mb-2">
+            <span class="text-sm font-semibold text-[#0B6B63]">Progress</span>
+            <span class="text-sm text-[#FF6B35] font-bold">0/10</span>
+        </div>
+        <div class="progress-container">
+            <div class="progress-fill" style="width: 0%;"></div>
+        </div>
+    </div>
+    
+    <p class="m-0 text-gray-700 mb-4">Pelajari tentang motif batik tradisional Maluku yang indah dan bermakna.</p>
+    
+    <button class="btn-engage-primary px-6 py-3 bg-[#FF6B35] text-white rounded-full font-bold w-full">
+        🚀 Mulai Kuis
+    </button>
+</div>
+
+<!-- ============================================
+     JAVASCRIPT USAGE EXAMPLES
+     ============================================ -->
+
+<script>
+// Celebrate Success with Confetti
+function completeQuiz() {
+    celebrateSuccess()  // Confetti + notification
+}
+
+// Show Achievement
+function earnBadge() {
+    triggerAchievement('Kuis Sempurna!')  // Confetti + celebration
+}
+
+// Update Progress
+function updateProgress(current, total) {
+    updateProgress(current, total)
+}
+
+// Animate Points
+function addPoints(points) {
+    const pointsEl = document.querySelector('.points-counter')
+    const current = parseInt(pointsEl.textContent) || 0
+    animateCounter(pointsEl, current + points, 800)
+}
+
+// Show Loading
+function submitForm() {
+    const btn = event.target
+    btn.innerHTML = '<div class="spinner"></div> Loading...'
+    // Will be reset on response
+}
+</script>
+
+<!-- ============================================
+     GRID LAYOUT EXAMPLES
+     ============================================ -->
+
+<!-- Engagement Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="card-engage bg-white rounded-3xl p-6 shadow-md">
+        <h4 class="text-lg font-bold text-[#0B6B63] mb-2">🎯 Soal 1</h4>
+        <p class="m-0 text-gray-600">Pertanyaan tentang batik</p>
+    </div>
+    
+    <div class="card-engage bg-white rounded-3xl p-6 shadow-md">
+        <h4 class="text-lg font-bold text-[#0B6B63] mb-2">🎯 Soal 2</h4>
+        <p class="m-0 text-gray-600">Pertanyaan tentang tari</p>
+    </div>
+    
+    <div class="card-engage bg-white rounded-3xl p-6 shadow-md">
+        <h4 class="text-lg font-bold text-[#0B6B63] mb-2">🎯 Soal 3</h4>
+        <p class="m-0 text-gray-600">Pertanyaan tentang kuliner</p>
+    </div>
+</div>
+
+<!-- ============================================
+     RESPONSIVE BUTTON LAYOUT
+     ============================================ -->
+
+<!-- Responsive Button Group -->
+<div class="flex flex-col md:flex-row gap-4">
+    <button class="btn-engage-primary flex-1 px-6 py-3 bg-[#FF6B35] text-white rounded-full font-bold">
+        ✓ Simpan
+    </button>
+    
+    <button class="btn-action flex-1 px-6 py-3 bg-white text-[#0B6B63] border-2 border-[#0B6B63] rounded-full font-bold">
+        ← Batal
+    </button>
+</div>
+
+<!-- ============================================
+     TIPS FOR USING ANIMATIONS
+     ============================================ -->
+
+<!--
+1. Always include the animation CSS file:
+   <link rel="stylesheet" href="{{ asset('css/maluku-decorations.css') }}">
+
+2. Always include the animations JS file:
+   <script src="{{ asset('js/animations.js') }}"></script>
+
+3. Use semantic HTML with proper ARIA labels
+
+4. Test animations on mobile devices
+
+5. Ensure animations don't block user interactions
+
+6. Combine animations with clear visual feedback
+
+7. Use animations to highlight important actions
+
+8. Keep animations under 500ms for UI feedback
+
+9. Respect user motion preferences (@media prefers-reduced-motion)
+
+10. Test animations on different browsers
+-->
